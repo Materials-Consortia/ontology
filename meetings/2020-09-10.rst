@@ -2,11 +2,11 @@
 Meeting September 10, 2020
 ==========================
 
-- Discussion about the objective of the effort
+- The objective of the effort
 
-  - As phrased right now, an ontology for materials databases.
+  - As phrased right now: an ontology for materials databases.
   - Probably needs to be made more precise as we go along.
-  - From the later discussions it seems there is some disagreement in views: should our aim primarily (only) be to further formalize e.g.,
+  - From the discussions we had this meeting, it seems there is some disagreement in view: should our aim primarily (only) be to further formalize e.g.,
     specific structural definitions / materials models of relevance for the databases represented (i.e., start from our knowledge and needs), or should this ontology
     be a connection across "all" desired representations of materials?
 
