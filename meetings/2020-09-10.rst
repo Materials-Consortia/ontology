@@ -1,0 +1,61 @@
+==========================
+Meeting September 10, 2020
+==========================
+
+- Discussion about the objective of the effort
+
+  - As phrased right now, an ontology for materials databases.
+  - Probably needs to be made more precise as we go along.
+  - From the later discussions it seems there is some disagreement in views: should our aim primarily (only) be to further formalize e.g.,
+    specific structural definitions / materials models of relevance for the databases represented (i.e., start from our knowledge and needs), or should this ontology
+    be a connection across "all" desired representations of materials?
+
+- Discussion about the organization of the sub ontology in the repository
+
+  - Do we need to define a material at all? Can we exclude "material" and just have materials models?
+  
+    - There cannot be any *attributes* on the "material" level.
+    - However, if we are trying to connect concepts, attributes isn't the only relevant thing, but how they connect.
+    - A biological model of a gene has oxygen. Our structural models have oxygen. It is the same oxygen, and that is a connection.
+    - It is difficult to see what harm the materials definition makes as a connection between materials models. 
+      However, it is also difficult to see what benefit it provides.
+      
+  - For material: should we make a more formal definition as: "A material is something that is described by a materials model"?
+
+    - A materials model is described by a specific set of parameters specifically tied to that model. Only things that can be described
+      by materials models are materials.
+      
+    - However, the present statistical mechanics-based description of the material can be kept with an informal role of tying the concept to intuition.  
+    
+  - Some discussion about materials models
+  
+    - What makes these materials models different. Do they have different attributes?; Yes, all models have their own specific parameters.
+    
+    - We should have `compositional model` with a subclass `structural model`. Some of our models relates to these.
+    
+    - Are all our present materials models actually materials models, or are they subclasses of materials?
+
+  - Removal of structure
+  
+    - We have single structure materials model. That is the same thing. Databases with a "structure" needs to connect that to our structure materials model.
+    
+- Future
+
+  - More discussion needed to sort out more precisely the base structure of the ontology; it is unclear if `Material` has a `Materials model` is the best we can do.
+
+  - Rickard will shedule another meeting in ~ a month.
+
+  - Rickard updates the GitHub stub ontology after what seems to be the current consensus.
+  
+  - We should create a list of links to relevant ontologies in the repository.
+  
+  - A few points to keep track of we did not get to this meeting:
+  
+    - Does the stub ontology organization fit into EMMO?
+    
+    - Can we formalize how we "define" entities in the ontology. (Based on what we decided for `material`: perhaps primarily as a mathematical/logical definition first, and with an informal physics description second). 
+ 
+    - How does properties fit into what we have?
+    
+    
+  
