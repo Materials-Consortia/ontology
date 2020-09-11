@@ -36,6 +36,12 @@ Meeting September 10, 2020
   
     - We have `single structure materials model`. That is the same thing. Databases with a `structure` concept needs to connect that to our `structure materials model`.
     
+  - Adding a materials model for defects in infinite periodic crystals
+  
+    - The CIF structure (and other structural models) allow for e.g., vacancies statstically placed in an infinite crystal. But it seems none of the other models we have included can handle the description of a defect in an otherwise perfect crystal.
+    
+    - Would be interesting to discuss the standardization of this as it is relevant to several databases.
+    
 - Future
 
   - More discussion needed to sort out more precisely the basic organization of the ontology; it is unclear if `Material` has a `Materials model` is the best way.
