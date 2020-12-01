@@ -41,6 +41,8 @@ Meeting October 30, 2020
 - Future
 
   - Our present design of material vs. materials models has been somewhat furthered strengthened from the discussion, and we probably should move ahead with what we have.
+  
+    * Nicola Marzari (comment after the discussion): I would separate though the structure of homogenous materials (all the categories listed, bar the composites and the materials synthesis), from these latter two. For the homogeneous materials I would not have metal alloys, but have disordered crystals (it includes insulators, semiconductors, etc... - the disorder is configurational on a lattice), ordered crystals, amorphous systems (there is no lattice), quasicrystals...
 
   - Saulius will reach out to at least one representative from IUCr to invite them to our next discussion to tell us about their effort and discuss the relation between our efforts.
     
