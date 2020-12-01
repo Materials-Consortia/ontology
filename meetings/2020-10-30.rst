@@ -1,0 +1,54 @@
+========================
+Meeting October 30, 2020
+========================
+
+- With Emanuele Ghedini present, the discussion was primarily on the design of EMMO and ways our efforts do / can / should align with the EMMO.
+
+  - How does a materials databases ontology relate to upper ontologies? 
+    I.e., would we want to create our own, purposely design to fold into EMMO, or should we just not care at all about upper ontologies (which connects to a discussion last meeting).
+    
+  - The EMMO design is a fixed upper and mid ontology, and then "modular" domain ontologies that align with these. 
+    A materials databases ontology could be such a domain ontology.
+    
+  - Our stub ontology design so far does not seem mismatched with the EMMO design.
+    
+  - In OPTIMADE, our scope has successively evolved (for example, we've elevated beyond computational databases to experiments, synthesis, etc., and thinking of materials properties in much more general terms). 
+    Staying connected to an upper ontology seems helpful for accomodating and structuring this type of expansion in scope.
+    
+  - EMMO's current definition of "material" is on the mid-level, so our work needs to be careful with the alignment with this.
+ 
+    - However, e.g., the definition of "crystal" is something that continuously updates with our present level of knowledge, so at least part of definitions like these belongs on the domain level.
+    
+- Connection to crystallography concepts
+
+  - A materials database ontology will clearly connect to crystallography concepts, e.g., as part of our structural materials models.
+  
+  - There is a crystallography domain ontology that is becoming part of EMMO, and when adding a domain ontology like this, EMMO builds the mid ontology to match.
+  
+  - The International Union of Crystallography (IUCr) is working on "an ontology" for their domain (even if it is not called that), and it seems we should coordinate with them. 
+    We want to look into this further. In OPTIMADE, we have always had a close eye on the CIF format dictionary definitions.
+    
+  - There are many alignments to keep in mind: our effort aligning with IUCr, the IUCr work being ontologized into something that aligns with EMMO, and the IUCr work aligning or not with the crystallography ontology on its way into EMMO.
+
+- The objective of our effort
+
+  - We have previously discussed the need to make the goal of our effort precise. 
+    We have phrased it as: an ontology for materials databases.
+  
+  - The discussion on domain ontologies today helps further clarify that objective: OPTIMADE was formed to represent the interests of a wide range of materials databases for creating a common API. 
+    As such, we are a good representative for the corresponding domain ontology. Our objective is to map out a common ontology for this domain. 
+    
+- Future
+
+  - Our present design of material vs. materials models has been somewhat furthered strengthened from the discussion, and we probably should move ahead with what we have.
+  
+    * Nicola Marzari (comment after the discussion): I would separate though the structure of homogenous materials (all the categories listed, bar the composites and the materials synthesis), from these latter two. For the homogeneous materials I would not have metal alloys, but have disordered crystals (it includes insulators, semiconductors, etc... - the disorder is configurational on a lattice), ordered crystals, amorphous systems (there is no lattice), quasicrystals...
+
+  - Saulius will reach out to at least one representative from IUCr to invite them to our next discussion to tell us about their effort and discuss the relation between our efforts.
+    
+  - If we get a representative from IUCr, the discussion will likely focus on crystallography concepts. 
+    However, as we move further forward, it starts to be time to dive into our materials model definitions with an eye on linking necessary entities and relations in the EMMO.
+
+  - We re-iterated the need for a list of links to relevant ontologies in the Github repository. An issue has been added to the repository for this.
+
+  - Rickard will send out a doodle for another meeting in ~ a month.
