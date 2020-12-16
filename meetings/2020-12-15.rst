@@ -7,7 +7,7 @@ Meeting December 15, 2020
 
   * Discussion on the degree to which relationships are/can be represented in the CIF format (and thus the implicit ontology of that standard)
   
-    - The CIF format is, at its core, "a dictionary" with carefully defines entities that can have values (single values, tables, etc.) 
+    - The CIF format is, at its core, "a dictionary" with carefully defined entities that can have values (single values, tables, etc.) 
       
     - The definitions of these data values describe relations between them, but there is no explicit machine-readable representation of relations.
       
@@ -61,7 +61,7 @@ Meeting December 15, 2020
   
   * We may want to branch out a few other models: Powder models? (Single material powder? Multiple materials powder?) Monolithed structures.
    
-- Future
+- Future / Agenda for the next meeting
 
   - Consider renaming "Single structure materials model" -> "Single crystal materials model." However, this may need more discussion;
     what more exactly is "a structure" for us?
