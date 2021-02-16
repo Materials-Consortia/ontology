@@ -71,7 +71,9 @@
     <!-- http://www.optimade.org/ontology/materials-databases/Material -->
 
     <owl:Class rdf:about="http://www.optimade.org/ontology/materials-databases/Material">
-        <rdfs:comment xml:lang="en">A material is a system of atoms in a state described by a statistical distribution over &apos;microstates&apos; (microscopic structure realizations).
+        <rdfs:comment xml:lang="en">Formal definiion: A material is something that is described by a materials model.
+
+Physical description: A material is a system of atoms in a state described by a statistical distribution over &apos;microstates&apos; (microscopic structure realizations).
 
 A material is distinguished from other materials by the ensemble of microstates that, due to the statistical distribution, are effectively the relevant ones in observations of the system. Two systems with distinctively different ensembles of relevant microstates are two different materials.
 
@@ -117,21 +119,12 @@ While the ensemble of relevant microstates defines the specific material, a mate
 
     <owl:Class rdf:about="http://www.optimade.org/ontology/materials-databases/SingleStructureMaterialsModel">
         <rdfs:subClassOf rdf:resource="http://www.optimade.org/ontology/materials-databases/MaterialsModel"/>
-        <rdfs:comment xml:lang="en">A single structure materials model is a materials model that specify the ensemble of relevant microstates of a material as a single structure. This represents, depending on the periodicity, a perfect bulk single crystal, slab, wire or molecule.</rdfs:comment>
-        <rdfs:label xml:lang="en">Single structure materials model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.optimade.org/ontology/materials-databases/Structure -->
-
-    <owl:Class rdf:about="http://www.optimade.org/ontology/materials-databases/Structure">
-        <rdfs:comment xml:lang="en">A structure is the geometrical configuration of specific atomic species. It may be partially or fully periodic or non-periodic.
+        <rdfs:comment xml:lang="en">A single structure materials model is a materials model that specify the ensemble of relevant microstates of a material as a single structure. A structure refer to the geometrical configuration of specific atomic species. It may be partially or fully periodic or non-periodic. That is, depending on the periodicity it represents a bulk single crystal, slab, wire or molecule.
 
 A structure may encompass a restricted ensemble of geometric realizations to the degree that can be described by disordered occupation on specific sites, or as disordered correlated occupations as can be described as assemblies.
 
 A structure may encompass a level of uncertainty in geometric realization with implicit atoms and site attachments.</rdfs:comment>
-        <rdfs:label xml:lang="en">Structure</rdfs:label>
+        <rdfs:label xml:lang="en">Single structure materials model</rdfs:label>
     </owl:Class>
     
 
