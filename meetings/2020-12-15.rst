@@ -1,0 +1,96 @@
+=========================
+Meeting December 15, 2020
+=========================
+
+- With James Hester present, the discussion naturally started on features of the CIF standard and thoughts on how our effort relates to the ontology-related work of the IUCr.
+  A context for this was a previous discussion on how an ontology for materials databases relates to / should be positioned to the work of IUCr and the crystallography domain of the EMMO.
+
+  * Discussion on the degree to which relationships are/can be represented in the CIF format (and thus the implicit ontology of that standard)
+  
+    - The CIF standards consist of 2 syntaxes (CIF1 and CIF2), ontology languages (DDL2,DDLm and the older DDL1), and a series of what can be called "dictionaries" which are ontologies written in DDLm or DDL2 for particular subject areas, e.g., "core", "modulated structures", "magnetic", "powder" and so forth. 
+ 
+    - The dictionaries carefully define entities ("data names") that can have one or more values when appearing in data files. Sufficient information is provided in the dictionary to form a relational schema from the data names, where these data names are the columns appearing in the relations.
+
+    - The definitions of the data names describe only those relationships found in the relational model: "key" data names and "foreign keys". The particular meaning underlying the foreign key relationship is not expressed.
+    
+    - Embedded algorithms are supported with the standard called "dREL", which is orthogonal to the other standards in that the algorithms appear simply as a text string in the dictionaries. dREL could be used in any relational environment, and is an optional addition to a definition. It expresses mathematical relationships between data names rather than logical ones like "is a" "is part of" "is a type of".
+      
+  * Some discussion about if the CIF standard "is an ontology" and what an ontology is.
+    There is no agreed-upon single definition.
+    Database schemas are one way to represent ontologies, but in general, ontologies can be far less restricted.
+
+  * Dictionary-based ontology-like systems like the CIF standard defines concepts implicitly by their expressibility; 
+    e.g., a structure is the sum of well-defined separate properties: lattice constants, species, positions, etc. 
+    The standard may not explicitly give a name to the concept of a "structure," 
+    but its definition becomes the implicit sum of the expressibility allowed by the dictionary keys.
+
+  * This form of definition via expressibility seems analogous to how things presently are organized in our prototype ontology.
+    Our formal definition of a material is now "Something that can be expressed by a materials model," and then we list materials models.
+    A material is thus defined by the expressibility of the sum of our materials models.
+    This is perhaps a desirable design as we go forward.
+      
+  * One of the things we are trying to do with our standardization effort is to build a foundation to express machine-representable relationships as a platform for translating between different application-specific ontologies (e.g., used for different databases)
+
+  * To some degree, we may want to think about "data formats" as separate from the underlying ontologies.
+    
+    - Ontologies are more about semantics than representation.
+    
+    - Ontologies are sometimes explicitly connected to specific data formats and sometimes not.
+    
+    - Data formats typically have an ontology tied to them, such as CIF.
+
+  * A related observation is that in data formats such as CIF, it is often a goal to unify data on a common format with restrictions to what variation of data representation can be used,
+    e.g., a few or a single way to represent a crystal structure. 
+    Depending on the goal with an ontology it may not be designed with the same desire, 
+    but rather one may aim to define many related concepts and alternatives for representation.
+    
+    - We may want to consider where our effort is positioned in this. To standardize for integration between databases, we may want to be restrictive, 
+      and accommodate the very wide range of alternative representations primarily via the definition of transformations to/from the ontology from other external ontologies (e.g., database-specific ontologies).
+
+  * CIF has a concept of "composite material" that is different from ours; a composite of overlapping repeating lattices.
+    We may want to consider adding this model and carefully consider naming in relation to our "Composite materials model."
+
+- Discussion about the division in "homogenous" and "inhomogenous" materials models
+
+  * Do we want to build this type of classifications into the "main tree" hierarchy, or not? 
+  
+    - Is there a point to adding extra steps in the "hierarchy of models"? Or, is there a desirable simplicity in keeping all specific materials models as the direct sublevel below "Materials model"? 
+      
+    - We can still have 'separate' classification concepts (e.g., entities) that we tie to the models, e.g., homogenous and inhomogenous, that would allow ontology-based reasoning on these concepts.
+
+- A similar question about hierarchical representation is about the "single structure" materials model we presently have in the prototype ontology.
+  This naming suggests a concept that encompasses many "submodels" that all fall under 'one structure.'
+  
+  * This may mostly be a naming thing in the prototype ontology. Our description relates more closely to "Single crystal," so perhaps we just need to rename "Single structure materials model" -> "Single crystal materials model."
+  
+  * We may want to branch out a few other models: Powder models? (Single material powder? Multiple materials powder?) Monolithed structures.
+   
+- Future / Agenda for the next meeting
+
+  - Consider renaming "Single structure materials model" -> "Single crystal materials model." However, this may need more discussion;
+    what more exactly is "a structure" for us?
+  
+  - Consider adding more models of the kinds discussed above.
+
+  - We have now had a series of explorative discussions of designs and concepts. 
+    Next meeting, we may want to try to move over to more concretely discuss how to progress with the prototype ontology in terms of
+    new entities (atoms, states, properties, ...) and materials model representations, e.g., pin down what "single structure" materials models 
+    means in a larger degree of precision and maybe discuss representations of bulk materials with defects.
+
+  - Next meeting will be at the end of January. Rickard sends a doodle.
+  
+Supplementary notes
+-------------------
+* Useful links related to the CIF standard:
+
+  - `Standards development <https://github.com/COMCIFS>`__
+
+  - `dREL in particular <https://github.com/COMCIFS/dREL>`__
+
+  - `The core dictionary <https://github.com/COMCIFS/cif_core/blob/master/cif_core.dic>`__
+
+  - `The DDLm language defined using itself <https://github.com/COMCIFS/cif_core/blob/master/ddl.dic>`__
+
+  - `The official IUCr website for CIF standards <https://www.iucr.org/resources/cif>`__ - the dictionaries are in an older DDL but the general architecture is the same.
+
+  - `The 2005 International Tables For Crystallography Vol G <https://it.iucr.org/G>`__ - everything to do with CIF including software, dictionaries, core standards but doesn't include DDLm or CIF2 syntax.
