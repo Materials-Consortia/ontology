@@ -78,3 +78,19 @@ Meeting December 15, 2020
     means in a larger degree of precision and maybe discuss representations of bulk materials with defects.
 
   - Next meeting will be at the end of January. Rickard sends a doodle.
+  
+Supplementary notes
+-------------------
+* Useful links related to the CIF standard:
+
+  - `Standards development <https://github.com/COMCIFS>`__
+
+  - `dREL in particular <https://github.com/COMCIFS/dREL>`__
+
+  - `The core dictionary <https://github.com/COMCIFS/cif_core/blob/master/cif_core.dic>`__
+
+  - `The DDLm language defined using itself <https://github.com/COMCIFS/cif_core/blob/master/ddl.dic>`__
+
+  - `The official IUCr website for CIF standards <https://www.iucr.org/resources/cif>`__ - the dictionaries are in an older DDL but the general architecture is the same.
+
+  - `The 2005 International Tables For Crystallography Vol G <https://it.iucr.org/G>`__ - everything to do with CIF including software, dictionaries, core standards but doesn't include DDLm or CIF2 syntax.
