@@ -7,9 +7,13 @@ Meeting December 15, 2020
 
   * Discussion on the degree to which relationships are/can be represented in the CIF format (and thus the implicit ontology of that standard)
   
-    - The CIF format is, at its core, "a dictionary" with carefully defined entities that can have values (single values, tables, etc.) 
-      
-    - The definitions of these data values describe relations between them, but there is no explicit machine-readable representation of relations.
+    - The CIF standards consist of 2 syntaxes (CIF1 and CIF2), ontology languages (DDL2,DDLm and the older DDL1), and a series of what can be called "dictionaries" which are ontologies written in DDLm or DDL2 for particular subject areas, e.g., "core", "modulated structures", "magnetic", "powder" and so forth. 
+ 
+    - The dictionaries carefully define entities ("data names") that can have one or more values when appearing in data files. Sufficient information is provided in the dictionary to form a relational schema from the data names, where these data names are the columns appearing in the relations.
+
+    - The definitions of the data names describe only those relationships found in the relational model: "key" data names and "foreign keys". The particular meaning underlying the foreign key relationship is not expressed.
+    
+    - Embedded algorithms are supported with the standard called "dREL", which is orthogonal to the other standards in that the algorithms appear simply as a text string in the dictionaries. dREL could be used in any relational environment, and is an optional addition to a definition. It expresses mathematical relationships between data names rather than logical ones like "is a" "is part of" "is a type of".
       
   * Some discussion about if the CIF standard "is an ontology" and what an ontology is.
     There is no agreed-upon single definition.
