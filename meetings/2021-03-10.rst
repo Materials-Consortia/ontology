@@ -1,0 +1,98 @@
+======================
+Meeting March 10, 2021
+======================
+
+- With no invitee or particular dedicated topic, the discussion was broadly centered around the present state of the effort, our aims, and how to continue the effort.
+
+- Use of "structure" vs. "crystal" (a discussion started last time, but cut short.)
+
+  * This topic is related to if the 'single structure materials model' in our prototype ontology should be 'single crystal materials model.'
+
+  * The underlying concept described by a crystal is something with an underlying periodicity.
+    It may be non-periodic in the absolute sense due to defects, disorder, etc., but these are modifications onto a system where Bloch's theorem applies.
+
+    - However, what about a quasicrystal, is that a crystal? In the semantic sense, yes, but model-wise, perhaps not.
+
+  * The term "structure" is already used in a more broad sense, e.g., "Amorphous structure materials model." Hence, it is not a great word to select to specifically represent something with an underlying periodicity.
+
+  * It makes sense to rename 'single structure materials model' to 'single crystal materials model.'
+
+- How well are we coordinating with other ongoing efforts, in particular in the US?
+
+  * The scheduling of these discussions has made them Europe-centric, but US databases are represented in OPTIMADE and, hopefully, informed about what is going on.
+
+  * We should invite someone from NIST to the next meeting (and make sure they can participate).
+    Rickard will reach out about this as we set up the poll for scheduling the next meeting.
+
+  * Maybe likewise we should invite someone from the Royce institute in the UK, who are involved in similar work (https://www.royce.ac.uk/)
+
+  * For the 'single crystal materials model' there is already an ongoing EMMO effort to create an ontology for crystallography trying to adhere to cif / the work of IUCr.
+    It makes sense to coordinate with that effort.
+
+- Restrictive vs. extensive ontology
+
+  * Are we aiming for an ontology that keeps the concepts down to a minimum or aims to be an accurate model of all concepts used in relation to materials databases?
+
+  * A good design could be a restricted core ontology + extensions, possibly targeting both aims.
+
+  * Interesting parallel with database-specific extensions in OPTIMADE under separated namespaces.
+    Can a similar strategy be devised here, where it is clear how the ontology is to be extended outside what is centrally standardized?
+
+  * Discussion about differences and similarities with an OPTIMADE namespace-like extension mechanism vs. other standard ways of extending an ontology by importing it.
+
+  * What is the point of making such extensions?
+
+    - To map from application concepts to/from standardized concepts (needed, e.g., for data integration)
+
+    - To utilize an extended ontology before concepts have been included in the standard.
+      For example: to represent calculations based on a model that is not yet standardized.
+
+  * What is special with this ontology for materials databases vs. existing ontologies in the domains of materials, materials science?
+    Are we restricting ourselves to the domain of what is relevant for computational databases?
+
+    - Supporting the applications we have in mind (ontology-supported databases, data integration, ...)
+
+    - Not just for computations, but we are also trying to design with experimental data in mind by, e.g., with the materials synthesis model.
+
+    - On the experimental side, we may need more input. 
+      We may want to look at coordinating with, e.g., NREL and the effort of Volker Blum.
+
+- Properties - how to add them to the ontology.
+  Two fundamental views have come up before: (i) there is "something" and "the properties of something"; or (ii) everything is properties.
+
+  * Our present prototype ontology is to a degree designed around "something" described by materials models.
+    Adding a property entity to the ontology would take us to "the properties of something."
+    Is this going to be limiting in comparison to an "everything is properties" view?
+    Or does it allow greater flexibility?
+
+  * Are we handling, e.g., processes of heat treatments of a material that changes its properties under such processes?
+
+    - Arguably, the prototype ontology does - a material created via a number of process steps can be represented in, e.g., the synthesis model.
+
+    - A measurement that is a process will likely be part of the description of that property.
+
+    - But in a more general sense, there may be "processes" and "properties of processes" that cannot be described within a materials model + properties framework.
+
+- Future / Agenda for the next meeting
+
+  * We will coordinate around arranging an invitation of someone from NIST for the next meeting.
+
+  * We want to start extending the prototype ontology more concretely.
+
+    - For the 'single crystal materials model,' we are ready to designate a working group for a proposal on how to concretize this model.
+      However, with the EMMO-related effort of a cif-based crystallography ontology with very similar aims, it makes sense to look into aligning these efforts.
+
+    - The other relevant extensions of the prototype ontology right now are: (i) find a design for how to include properties; (ii) making the proposed materials models more concrete; (iii) adding missing models.
+
+      * It would be good to more broadly discuss basic design alternatives for these before designating actual working groups and preparing proposals.
+
+      * The proposed process is: everyone is encouraged to prototype a design of their interest.
+
+      * These design prototypes are meant to be broad, high-level sketches, preferably considering multiple alternatives.
+        In particular, the point is not yet developing them to a degree where one would get invested in a specific design.
+
+      * The design prototype outlines are to be brought up at future meetings to discuss the merits and drawbacks.
+        As we agree on designs, we will call for a working group to develop them into concrete proposals.
+
+      * Design prototypes and proposals are welcome to be added to the ontology repository via pull-requests.
+
